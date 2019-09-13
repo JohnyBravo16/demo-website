@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Video Games Site</title>
+
+  <link href="vendor/bootstrap/css/bootstrap.min2.css" rel="stylesheet">
+
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+  <link href="css/carousel.css" rel="stylesheet">
+  
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+    <script>
+	$(document).ready(function(){
+		$('[data-toggle="popover"]').popover();
+		
+		$("#menu-toggle").click(function(e)
+		{
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	
+		$('.carousel').carousel({
+			interval: 6000
+		});
+	  
+	});
+  </script>
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Game categories</div>
+      <div class="list-group list-group-flush">
+		<a href="index.html" class="list-group-item list-group-item-action bg-light ">
+			<div class="d-flex w-100 justify-content-between">
+				<h5 class="mb-1">Home page</h5>
+			</div>
+		</a>
+        <a href="FPS.html" class="list-group-item list-group-item-action bg-light">
+			<div class="d-flex w-100 justify-content-between">
+				<h5 class="mb-1">FPS</h5>
+			</div>
+			<small>First Person Shooter</small>
+		</a>
+		<a href="RTS.html" class="list-group-item list-group-item-action bg-light">
+			<div class="d-flex w-100 justify-content-between">
+				<h5 class="mb-1">RTS</h5>
+			</div>
+			<small>Real Time Strategy</small>
+		</a>
+		<a href="MOBA.html" class="list-group-item list-group-item-action bg-light">
+			<div class="d-flex w-100 justify-content-between">
+				<h5 class="mb-1">MOBA</h5>
+			</div>
+			<small>Multiplayer Online Battle Arena</small>
+		</a>
+		<a href="Battle_royale.html" class="list-group-item list-group-item-action bg-light">
+			<div class="d-flex w-100 justify-content-between">
+				<h5 class="mb-1">Battle Royale</h5>
+			</div>
+		</a>
+		<a href="MMO.html" class="list-group-item list-group-item-action active">
+			<div class="d-flex w-100 justify-content-between">
+				<h5 class="mb-1">MMO</h5>
+			</div>
+			<small>Massive Multiplayer Online</small>
+		</a>
+      </div>
+    </div>
+
+    <div id="page-content-wrapper">
+
+		  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+			<button class="btn btn-primary btn-lg" id="menu-toggle" data-toggle="button" aria-pressed="false">Menu</button>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<div class="btn-group ml-auto mt-2 mt-lg-0">
+				  <a href="cone.html" class="btn btn-secondary" id="Calc" role="button" data-trigger="hover" data-toggle="popover" data-content="Click here to open cone calculator page">Calculator</a>
+				  <div class="btn-group">
+					<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+					   Change theme
+					</button>
+					<div class="dropdown-menu">
+					  <a class="dropdown-item bg-secondary text-white" href="MMO_dark.html">Dark theme</a>
+					  <a class="dropdown-item" href="#">Light theme</a>
+					</div>
+				  </div>
+				</div>
+			</div>
+		  </nav>
+		  
+		<div class="container">
+			<div class="row content-bgcolor border rounded-left">
+				<div class="col p-3 mb-2 bg-light text-dark">
+					<div class="row justify-content-center">
+						<div class="col">
+							<h1>Massively Multiplayer Online</h1>
+						</div>
+					</div>
+					<br>
+					<div class="row justify-content-center">
+						<div class="col justify-content-center">
+							<p><b>MMO</b> games usually feature enormous persistent open worlds and have thousands of users playing on the same server. These games require network-capable platforms such as smart phones, computers, and internet-connected game consoles.
+							</p>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col">
+							<p>In MMOs, players can cooperate and interact with one another on a large scale. There are MMOs across a range of different gameplay types and genres. 
+							MMOs can be FPS, RPG, or RTS, across fields as diverse as combat, sports, racing, social, and others.</p>
+						</div>
+					</div>
+				<br>
+				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+				  <ol class="carousel-indicators">
+					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				  </ol>
+				  <div class="carousel-inner">
+					<div class="carousel-item active">
+						<div class="hovereffect">
+						  <img class="rounded-left w-100" src="images/wow1.jpg" alt="First slide">
+							<div class="overlay">
+								<div class="carousel-caption d-none d-md-block">
+								<h5>World of Warcraft</h5>
+								<p>Massive multiplayer online game, where players can team, fight or help each other.</p>
+								</div>
+						  </div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="hovereffect">
+						  <img class="rounded-left w-100" src="images/eso1.jpg" alt="Second slide">
+							<div class="overlay">
+								<div class="carousel-caption d-none d-md-block">
+								<h5>Elder Scrolls Online</h5>
+								<p>Massive multiplayer online game, where players can team, fight or help each other.</p>
+								</div>
+						  </div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="hovereffect">
+						  <img class="rounded-left w-100" src="images/gw1.jpg" alt="Third slide">
+							<div class="overlay">
+								<div class="carousel-caption d-none d-md-block">
+								<h5>Guild Wars 2</h5>
+								<p>Massive multiplayer online game, where players can team, fight or help each other.</p>
+								</div>
+						  </div>
+						</div>
+					</div>
+				  </div>
+				  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				  </a>
+				  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				  </a>
+				</div>
+			</div>
+		</div>
+    </div>
+    </div>
+  </div>
+ 
+
+</body>
+
+</html>

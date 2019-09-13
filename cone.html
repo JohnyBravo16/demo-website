@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Video Games Site</title>
+
+  <link href="vendor/bootstrap/css/bootstrap.min2.css" rel="stylesheet">
+
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+  <link href="css/carousel.css" rel="stylesheet">
+  <link href="css/slider.css" rel="stylesheet">
+  
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+    <script>
+	$(document).ready(function(){
+		$('[data-toggle="popover"]').popover();
+		
+		$("#menu-toggle").click(function(e)
+		{
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	
+		$('.carousel').carousel({
+			interval: 6000
+		});
+	  
+	});
+  </script>
+
+  <script>
+  
+  $(document).ready(function() 
+	{	
+		$(document).on('input', '#numberRadius', function() {
+		
+			var radius = parseFloat($("#numberRadius").val());
+			var height = parseFloat($("#numberHeight").val());
+			var slant_height = Math.sqrt((Math.pow(height, 2) + (Math.pow(radius, 2))));
+			var baseSurface = Math.PI * Math.pow(radius, 2);
+			var latelar_surface = Math.PI * radius * slant_height;
+			var volume = Math.PI * Math.pow(radius, 2) * height * 0.33;
+			
+			$("#numberRadiusText").val(radius);
+			
+			var total_surface = (Math.PI * Math.pow(radius, 2) + (Math.PI * radius * slant_height));
+			
+			$("#totalSurface").val("Total cone surface: " + total_surface);
+			$("#baseSurface").val("Base cone surface: " + baseSurface);
+			$("#latelar_surface").val("Latelar cone surface: " + latelar_surface);
+			$("#totalVolume").val("Total volume: " + volume);
+		});
+		
+		$(document).on('input', '#numberHeight', function() {
+
+			var radius = parseFloat($("#numberRadius").val());
+			var height = parseFloat($("#numberHeight").val());
+			var slant_height = Math.sqrt((Math.pow(height, 2) + (Math.pow(radius, 2))));
+			var baseSurface = Math.PI * Math.pow(radius, 2);
+			var latelar_surface = Math.PI * radius * slant_height;
+			var volume = Math.PI * Math.pow(radius, 2) * height * 0.33;
+			
+			$("#numberHeightText").val(height);
+			
+			var total_surface = (Math.PI * Math.pow(radius, 2) + (Math.PI * radius * slant_height));
+			
+			$("#totalSurface").val("Total cone surface: " + total_surface);
+			$("#baseSurface").val("Base cone surface: " + baseSurface);
+			$("#latelar_surface").val("Latelar cone surface: " + latelar_surface);
+			$("#totalVolume").val("Total volume: " + volume);
+		});
+		
+		$(document).on('change', '#numberRadiusText', function() {
+		
+			var radius = parseFloat($(this).val());
+			var height = parseFloat($("#numberHeight").val());
+			var slant_height = Math.sqrt((Math.pow(height, 2) + (Math.pow(radius, 2))));
+			var baseSurface = Math.PI * Math.pow(radius, 2);
+			var latelar_surface = Math.PI * radius * slant_height;
+			var volume = Math.PI * Math.pow(radius, 2) * height * 0.33;
+			
+			var total_surface = (Math.PI * Math.pow(radius, 2) + (Math.PI * radius * slant_height));
+		
+			$("#numberRadius").val($(this).val());
+		
+			$("#totalSurface").val("Total cone surface: " + total_surface);
+			$("#baseSurface").val("Base cone surface: " + baseSurface);
+			$("#latelar_surface").val("Latelar cone surface: " + latelar_surface);
+			$("#totalVolume").val("Total volume: " + volume);
+			
+		});
+		
+		$(document).on('change', '#numberHeightText', function() {
+		
+			var radius = parseFloat($("#numberRadius").val());
+			var height = parseFloat($(this).val());
+			var slant_height = Math.sqrt((Math.pow(height, 2) + (Math.pow(radius, 2))));
+			var baseSurface = Math.PI * Math.pow(radius, 2);
+			var latelar_surface = Math.PI * radius * slant_height;
+			var total_surface = (Math.PI * Math.pow(radius, 2) + (Math.PI * radius * slant_height));
+			var volume = Math.PI * Math.pow(radius, 2) * height * 0.33;
+		
+			$("#numberHeight").val($(this).val());
+		
+			$("#totalSurface").val("Total cone surface: " + total_surface);
+			$("#baseSurface").val("Base cone surface: " + baseSurface);
+			$("#latelar_surface").val("Latelar cone surface: " + latelar_surface);
+			$("#totalVolume").val("Total volume: " + volume);
+			
+		});
+		
+	});
+  
+
+  </script>
+  
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+
+		<div class="bg-light border-right" id="sidebar-wrapper">
+		  <div class="sidebar-heading">Game categories</div>
+		  <div class="list-group list-group-flush">
+			<a href="index.html" class="list-group-item list-group-item-action">
+				<div class="d-flex w-100 justify-content-between">
+					<h5 class="mb-1">Home page</h5>
+				</div>
+			</a>
+			<a href="FPS.html" class="list-group-item list-group-item-action bg-light">
+				<div class="d-flex w-100 justify-content-between">
+					<h5 class="mb-1">FPS</h5>
+				</div>
+				<small>First Person Shooter</small>
+			</a>
+			<a href="RTS.html" class="list-group-item list-group-item-action bg-light">
+				<div class="d-flex w-100 justify-content-between">
+					<h5 class="mb-1">RTS</h5>
+				</div>
+				<small>Real Time Strategy</small>
+			</a>
+			<a href="MOBA.html" class="list-group-item list-group-item-action bg-light">
+				<div class="d-flex w-100 justify-content-between">
+					<h5 class="mb-1">MOBA</h5>
+				</div>
+				<small>Multiplayer Online Battle Arena</small>
+			</a>
+			<a href="Battle_royale.html" class="list-group-item list-group-item-action bg-light">
+				<div class="d-flex w-100 justify-content-between">
+					<h5 class="mb-1">Battle Royale</h5>
+				</div>
+			</a>
+			<a href="MMO.html" class="list-group-item list-group-item-action bg-light">
+				<div class="d-flex w-100 justify-content-between">
+					<h5 class="mb-1">MMO</h5>
+				</div>
+				<small>Massive Multiplayer Online</small>
+			</a>
+		  </div>
+		</div>
+
+
+		<div id="page-content-wrapper">
+
+		  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+			<button class="btn btn-primary btn-lg" id="menu-toggle" data-toggle="button" aria-pressed="false">Menu</button>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<div class="btn-group ml-auto mt-2 mt-lg-0">
+				  <a href="cone.html" class="btn btn-secondary" id="Calc" role="button" data-trigger="hover" data-toggle="popover" data-content="Click here to open cone calculator page">Calculator</a>
+				  <div class="btn-group">
+					<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+					   Change theme
+					</button>
+					<div class="dropdown-menu">
+					  <a class="dropdown-item bg-secondary text-white" href="cone_dark.html">Dark theme</a>
+					  <a class="dropdown-item" href="#">Light theme</a>
+					</div>
+				  </div>
+				</div>
+			</div>
+		  </nav>
+		  
+			<br>
+			<div class="container">
+				<div class="row content-bgcolor border rounded-left">
+					<div class="col p-3 mb-2 bg-light text-dark">
+						<div class="row">
+							<div class="col text-center">
+								<h1>Cone calculator</h1><br>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<form>
+									<label for="numberRadiusText">Input radius:	<input type="number" min="1" max="100" value="1" id="numberRadiusText"></label>
+									<br>
+									<input type="range" min="1" max="100" value="1" class="slider" id="numberRadius">
+									<br>
+									<br>
+									<label for="numberHeightText">Input height:	<input type="number" min="1" max="100" value="100" id="numberHeightText"></label>
+									<br>
+									<input type="range" min="1" max="100" value="100" class="slider" id="numberHeight">
+									<br>
+								</form>
+							</div>
+							<div class="col">
+								<output id="totalSurface" ></output><br><br>
+								<output id="baseSurface"></output><br><br>
+								<output id="latelar_surface"></output><br><br>
+								<output id="totalVolume"></output>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+  
+
+
+</body>
+
+</html>
